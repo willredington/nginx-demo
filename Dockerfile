@@ -1,1 +1,1 @@
-FROM nginx
+FROM docker.io/nginx
