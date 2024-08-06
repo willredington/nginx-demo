@@ -4,8 +4,8 @@ pipeline {
         stage('Hello') {
             steps {
                 echo 'Hello World'
-                // sh 'docker build -t demo .'
-                sh 'helm upgrade --install demo app --namespace demo2 --create-namespace --wait --timeout 5m'
+                sh 'podman build -t demo .'
+                // sh 'helm upgrade --install demo app --namespace demo2 --create-namespace --wait --timeout 5m'
                 echo 'FINISHED'
             }
         }
