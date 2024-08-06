@@ -8,7 +8,6 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                sh 'node -v'
                 sh 'aws ecr get-login-password --region us-east-2 | podman login --username AWS --password-stdin 992256429851.dkr.ecr.us-east-2.amazonaws.com'
                 sh 'podman build -t demo .'
                 sh 'podman tag demo:latest 992256429851.dkr.ecr.us-east-2.amazonaws.com/demo:latest'
