@@ -5,10 +5,6 @@ pipeline {
         HELLO = credentials('HELLO')
     }
 
-    tools {
-        nodejs '20'
-    }
-
     stages {
         stage('Hello') {
             steps {
