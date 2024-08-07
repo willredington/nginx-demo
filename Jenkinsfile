@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    environment {
-        HELLO = credentials('HELLO')
-    }
-
     stages {
         stage('Hello') {
             steps {
