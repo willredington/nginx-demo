@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+
+    agent {
+        kubernetes {
+            inheritFrom 'jenkins-slave-spot-small'
+        }
+    }
 
     stages {
         stage('Hello') {
